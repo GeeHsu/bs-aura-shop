@@ -18,3 +18,16 @@
   color: #fff;
   text-align: center;
 }
+
+.list-group-item.custom-border {
+  border-bottom: 2px solid #000000;
+}
+
+.table-border-bottom {
+  border-bottom: 2px solid #000000;
+}
+
+.tfoot-border-bottom th,
+.tfoot-border-bottom td {
+  border-bottom: none; /* 移除下底線 */
+}
