@@ -37,3 +37,8 @@
   background-color: $dark-info; /* 已選中狀態的背景顏色 */
   border-color: $dark-info; /* 邊框顏色 */
 }
+
+.tbody-border-bottom th,
+.tbody-border-bottom td {
+  border-bottom: none;
+}
