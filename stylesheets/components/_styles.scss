@@ -31,3 +31,9 @@
 .tfoot-border-bottom td {
   border-bottom: none; /* 移除下底線 */
 }
+
+.form-switch .form-check-input:checked,
+.form-check .form-check-input:checked {
+  background-color: $dark-info; /* 已選中狀態的背景顏色 */
+  border-color: $dark-info; /* 邊框顏色 */
+}
