@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>奧拉花店 - 後台產品</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+  </head>
+  <body>
+    <!-- Navbar 導覽列 start -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <h1>
+          <a class="navbar-brand" href="fe-index.html">
+            <img
+              src="img/logo.png"
+              class="img-fluid"
+              width="72"
+              height="72"
+              alt=""
+            />
+          </a>
+        </h1>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item me-5">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="be-products.html"
+                >產品</a
+              >
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link" href="#">訂單</a>
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link" href="#">優惠券</a>
+            </li>
+            <a href="be-login.html" class="btn btn-primary px-5">登出</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar 導覽列 end -->
+
+    <!-- Products 產品 start -->
+    <section class="container py-5">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="text-end">
+            <button
+              type="button"
+              class="btn btn-primary px-5 mb-3"
+              data-bs-toggle="modal"
+              data-bs-target="#productModal"
+              data-mode="create"
+            >
+              新增產品
+            </button>
+          </div>
+          <table class="table table-bordered align-middle text-center">
+            <thead>
+              <tr>
+                <th width="112">分類</th>
+                <th width="300">產品名稱</th>
+                <th width="112">原價</th>
+                <th width="112">售價</th>
+                <th width="200">是否啟用</th>
+                <th width="200">編輯</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>乾燥花</th>
+                <td>玫瑰</td>
+                <td>200</td>
+                <td>150</td>
+                <td>啟用</td>
+                <td>
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-outline-dark-info"
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      data-mode="edit"
+                      data-title="玫瑰"
+                      data-category="乾燥花"
+                      data-originprice="200"
+                      data-price="150"
+                      data-enable="啟用"
+                    >
+                      編輯
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-danger"
+                      data-bs-toggle="modal"
+                      data-bs-target="#genericModal"
+                      data-action="delete"
+                      data-title="玫瑰"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>乾燥花</th>
+                <td>薰衣草</td>
+                <td>200</td>
+                <td>150</td>
+                <td>啟用</td>
+                <td>
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-outline-dark-info"
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      data-mode="edit"
+                      data-title="薰衣草"
+                      data-category="乾燥花"
+                      data-originprice="200"
+                      data-price="150"
+                      data-enable="啟用"
+                    >
+                      編輯
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-danger"
+                      data-bs-toggle="modal"
+                      data-bs-target="#genericModal"
+                      data-action="delete"
+                      data-title="薰衣草"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>乾燥花</th>
+                <td>滿天星</td>
+                <td>200</td>
+                <td>150</td>
+                <td>啟用</td>
+                <td>
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-outline-dark-info"
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      data-mode="edit"
+                      data-title="滿天星"
+                      data-category="乾燥花"
+                      data-originprice="200"
+                      data-price="150"
+                      data-enable="啟用"
+                    >
+                      編輯
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-danger"
+                      data-bs-toggle="modal"
+                      data-bs-target="#genericModal"
+                      data-action="delete"
+                      data-title="滿天星"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>乾燥花</th>
+                <td>蒲公英</td>
+                <td>200</td>
+                <td>150</td>
+                <td>啟用</td>
+                <td>
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-outline-dark-info"
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      data-mode="edit"
+                      data-title="蒲公英"
+                      data-category="乾燥花"
+                      data-originprice="200"
+                      data-price="150"
+                      data-enable="啟用"
+                    >
+                      編輯
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-danger"
+                      data-bs-toggle="modal"
+                      data-bs-target="#genericModal"
+                      data-action="delete"
+                      data-title="蒲公英"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>乾燥花</th>
+                <td>向日葵</td>
+                <td>200</td>
+                <td>150</td>
+                <td>啟用</td>
+                <td>
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-outline-dark-info"
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      data-mode="edit"
+                      data-title="向日葵"
+                      data-category="乾燥花"
+                      data-originprice="200"
+                      data-price="150"
+                      data-enable="啟用"
+                    >
+                      編輯
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-danger"
+                      data-bs-toggle="modal"
+                      data-bs-target="#genericModal"
+                      data-action="delete"
+                      data-title="向日葵"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>新鮮花</th>
+                <td>康乃馨</td>
+                <td>200</td>
+                <td>150</td>
+                <td>啟用</td>
+                <td>
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-outline-dark-info"
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      data-mode="edit"
+                      data-title="康乃馨"
+                      data-category="新鮮花"
+                      data-originprice="200"
+                      data-price="150"
+                      data-enable="啟用"
+                    >
+                      編輯
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-danger"
+                      data-bs-toggle="modal"
+                      data-bs-target="#genericModal"
+                      data-action="delete"
+                      data-title="康乃馨"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>新鮮花</th>
+                <td>紫羅蘭</td>
+                <td>200</td>
+                <td>150</td>
+                <td>啟用</td>
+                <td>
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-outline-dark-info"
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      data-mode="edit"
+                      data-title="紫羅蘭"
+                      data-category="新鮮花"
+                      data-originprice="200"
+                      data-price="150"
+                      data-enable="啟用"
+                    >
+                      編輯
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-danger"
+                      data-bs-toggle="modal"
+                      data-bs-target="#genericModal"
+                      data-action="delete"
+                      data-title="紫羅蘭"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>新鮮花</th>
+                <td>蘭花</td>
+                <td>200</td>
+                <td>150</td>
+                <td>啟用</td>
+                <td>
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-outline-dark-info"
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      data-mode="edit"
+                      data-title="蘭花"
+                      data-category="新鮮花"
+                      data-originprice="200"
+                      data-price="150"
+                      data-enable="啟用"
+                    >
+                      編輯
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-danger"
+                      data-bs-toggle="modal"
+                      data-bs-target="#genericModal"
+                      data-action="delete"
+                      data-title="蘭花"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>新鮮花</th>
+                <td>茉莉花</td>
+                <td>200</td>
+                <td>150</td>
+                <td>啟用</td>
+                <td>
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-outline-dark-info"
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      data-mode="edit"
+                      data-title="茉莉花"
+                      data-category="新鮮花"
+                      data-originprice="200"
+                      data-price="150"
+                      data-enable="啟用"
+                    >
+                      編輯
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-danger"
+                      data-bs-toggle="modal"
+                      data-bs-target="#genericModal"
+                      data-action="delete"
+                      data-title="茉莉花"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>新鮮花</th>
+                <td>鬱金香</td>
+                <td>200</td>
+                <td>150</td>
+                <td>啟用</td>
+                <td>
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn btn-outline-dark-info"
+                      data-bs-toggle="modal"
+                      data-bs-target="#productModal"
+                      data-mode="edit"
+                      data-title="鬱金香"
+                      data-category="新鮮花"
+                      data-originprice="200"
+                      data-price="150"
+                      data-enable="啟用"
+                    >
+                      編輯
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-danger"
+                      data-bs-toggle="modal"
+                      data-bs-target="#genericModal"
+                      data-action="delete"
+                      data-title="鬱金香"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- 分頁頁碼 start -->
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link link-dark" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link link-dark bg-secondary" href="#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link link-dark" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link link-dark" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- 分頁頁碼 end -->
+        </div>
+      </div>
+    </section>
+    <!-- Products 產品 end -->
+
+    <!-- Product Modal 產品互動視窗 start -->
+    <div
+      class="modal fade"
+      id="productModal"
+      tabindex="-1"
+      aria-labelledby="productModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header bg-secondary">
+            <h1 class="modal-title fs-5" id="productModalLabel">新增產品</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="modalBodyContent">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="px-3">
+                    <div class="mb-3">
+                      <label for="inputuploadImage" class="form-label"
+                        >上傳主要圖片</label
+                      >
+                      <input
+                        type="file"
+                        class="form-control"
+                        id="inputuploadImage"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="inputuploadImages" class="form-label"
+                        >上傳多張圖片</label
+                      >
+                      <input
+                        type="file"
+                        class="form-control"
+                        id="inputuploadImages"
+                        multiple
+                      />
+                    </div>
+                    <button type="button" class="btn btn-primary w-100">
+                      新增圖片
+                    </button>
+                  </div>
+                </div>
+                <div class="col-lg-8">
+                  <div>
+                    <div class="mb-3">
+                      <label for="inputTitle" class="form-label">標題</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputTitle"
+                        placeholder="請輸入標題"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <div class="row">
+                        <div class="col">
+                          <label for="inputCategory" class="form-label"
+                            >分類</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="inputCategory"
+                            placeholder="請輸入分類"
+                          />
+                        </div>
+                        <div class="col">
+                          <label for="inputUnit" class="form-label">單位</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="inputUnit"
+                            placeholder="請輸入單位"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <div class="row">
+                        <div class="col">
+                          <label for="inputOriginPrice" class="form-label"
+                            >原價</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="inputOriginPrice"
+                            placeholder="請輸入原價"
+                          />
+                        </div>
+                        <div class="col">
+                          <label for="inputPrice" class="form-label"
+                            >售價</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="inputPrice"
+                            placeholder="請輸入售價"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <hr class="border-2 border-dark" />
+                    <div class="mb-3">
+                      <label for="DescriptionTextarea" class="form-label"
+                        >產品描述</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="DescriptionTextarea"
+                        rows="3"
+                        placeholder="請輸入產品描述"
+                      ></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <label for="ContentTextarea" class="form-label"
+                        >產品內容</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="ContentTextarea"
+                        rows="3"
+                        placeholder="請輸入產品內容"
+                      ></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="checkenable"
+                        />
+                        <label class="form-check-label" for="checkenable">
+                          是否啟用
+                        </label>
+                      </div>
+                    </div>
+                    <hr class="border-2 border-dark" />
+                    <div class="text-end">
+                      <button
+                        type="button"
+                        class="btn btn-outline-dark px-5 me-3"
+                        data-bs-dismiss="modal"
+                      >
+                        取消
+                      </button>
+                      <button type="button" class="btn btn-primary px-5">
+                        確定
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Product Modal 產品互動視窗 end -->
+
+    <!-- Delete Product Modal 刪除產品互動視窗 start -->
+    <div
+      class="modal fade"
+      id="genericModal"
+      tabindex="-1"
+      aria-labelledby="genericModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header" id="genericModalHeader">
+            <h5 class="modal-title text-dark" id="genericModalLabel">提示</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="genericModalBody">
+            <p>是否確定進行此操作？</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-dark px-5"
+              data-bs-dismiss="modal"
+            >
+              取消
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger px-5"
+              id="confirmActionButton"
+            >
+              確定
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Delete Product Modal 刪除產品互動視窗 end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 產品編輯/新增 modal 相關
+        const productModal = document.getElementById("productModal");
+        const modalTitle = document.getElementById("productModalLabel");
+
+        productModal.addEventListener("show.bs.modal", function (event) {
+          const button = event.relatedTarget;
+          const mode = button.getAttribute("data-mode");
+          const productName = button.getAttribute("data-title") || "";
+
+          const category = button.getAttribute("data-category") || "";
+          const originPrice = button.getAttribute("data-originprice") || "";
+          const price = button.getAttribute("data-price") || "";
+          const enableStatus = button.getAttribute("data-enable") || "";
+
+          // 根據 mode 設定標題
+          switch (mode) {
+            case "create":
+              modalTitle.textContent = "新增產品";
+              // 清空編輯欄位
+              clearModalFields();
+              // 預設單位為「支」
+              document.getElementById("inputUnit").value = "支";
+              break;
+            case "edit":
+              modalTitle.textContent = "編輯產品";
+              // 填充編輯欄位
+              document.getElementById("inputTitle").value = productName;
+              document.getElementById("inputCategory").value = category;
+              document.getElementById("inputOriginPrice").value = originPrice;
+              document.getElementById("inputPrice").value = price;
+              document.getElementById("inputUnit").value = "支"; // 預設單位為「支」
+              document.getElementById("checkenable").checked =
+                enableStatus === "啟用";
+              break;
+          }
+        });
+
+        // 清空 Modal 欄位
+        function clearModalFields() {
+          document.getElementById("inputTitle").value = "";
+          document.getElementById("inputCategory").value = "";
+          document.getElementById("inputOriginPrice").value = "";
+          document.getElementById("inputPrice").value = "";
+          document.getElementById("inputUnit").value = "";
+          document.getElementById("checkenable").checked = false;
+        }
+
+        // 刪除確認 modal 相關
+        const genericModal = document.getElementById("genericModal");
+        const modalTitleDelete = document.getElementById("genericModalLabel");
+        const modalBody = document.getElementById("genericModalBody");
+        const modalHeader = document.getElementById("genericModalHeader");
+        const confirmActionButton = document.getElementById(
+          "confirmActionButton"
+        );
+
+        // 當 generic modal 顯示時觸發
+        genericModal.addEventListener("show.bs.modal", function (event) {
+          const button = event.relatedTarget; // 觸發 modal 的按鈕
+          const action = button.getAttribute("data-action"); // 操作類型：delete
+          const productName = button.getAttribute("data-title"); // 產品名稱
+
+          // 當是刪除操作時
+          if (action === "delete") {
+            modalTitleDelete.textContent = `刪除 ${productName}`; // 顯示 "刪除 玫瑰"
+            modalHeader.classList.add("bg-danger", "text-white"); // 設置紅色背景
+            modalBody.innerHTML = `<p>是否刪除 <strong class="text-danger">${productName}</strong>? (刪除後將無法恢復)。</p>`; // 顯示 "是否刪除 玫瑰"
+            confirmActionButton.textContent = "確定刪除"; // 按鈕顯示 "確定刪除"
+            confirmActionButton.classList.remove("btn-outline-dark");
+            confirmActionButton.classList.add("btn-danger"); // 設置紅色刪除按鈕
+            confirmActionButton.onclick = function () {
+              // 這裡可以執行刪除操作
+              console.log(`產品 ${productName} 已刪除`);
+              // 關閉 modal
+              const modalInstance = bootstrap.Modal.getInstance(genericModal);
+              modalInstance.hide();
+            };
+          } else {
+            console.log("未知操作");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
